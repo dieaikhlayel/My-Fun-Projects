@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.control-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
+    z-index: 10;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.control-panel.hidden {
+    transform: translateX(-320px);
+}
+
+.info-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: transparent;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.2s ease;
+}
+
+.info-button:hover {
+    opacity: 1;
+    background: #00ff00;
+    color: #000;
+}
+
+.control-panel h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #00ff00;
+    text-transform: uppercase;
+}
+
+.control-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-group label {
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.control-group input[type="color"] {
+    width: 40px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.control-group select,
+.control-group input[type="text"] {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    flex: 2;
+}
+
+.control-group input[type="range"] {
+    flex: 2;
+    accent-color: #00ff00;
+}
+
+.control-group span {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.control-group button {
+    background: #00ff00;
+    color: #000;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.control-group button:hover {
+    background: #00cc00;
+}
+
+@media (max-width: 600px) {
+    .control-panel {
+        max-width: 90%;
+        left: 5%;
+        top: 10px;
+    }
+
+    .info-button {
+        right: 5%;
+        bottom: 10px;
+    }
+}

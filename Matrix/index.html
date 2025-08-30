@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Digital Rain</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div id="control-panel" class="control-panel">
+        <h2>Matrix Rain Controls</h2>
+        <div class="control-group">
+            <label for="primaryColor">Primary Color:</label>
+            <input type="color" id="primaryColor" value="#00ff00">
+        </div>
+        <div class="control-group">
+            <label for="secondaryColor">Secondary Color:</label>
+            <input type="color" id="secondaryColor" value="#ff0000">
+        </div>
+        <div class="control-group">
+            <label for="mixMode">Color Mode:</label>
+            <select id="mixMode">
+                <option value="single">Single Color</option>
+                <option value="gradient">Gradient</option>
+                <option value="random">Random Mix</option>
+                <option value="rainbow">Rainbow</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="speed">Animation Speed:</label>
+            <input type="range" id="speed" min="10" max="100" value="33">
+            <span id="speedValue">33ms</span>
+        </div>
+        <div class="control-group">
+            <label for="fontSize">Font Size:</label>
+            <input type="range" id="fontSize" min="8" max="24" value="14">
+            <span id="fontSizeValue">14px</span>
+        </div>
+        <div class="control-group">
+            <label for="characterSet">Character Set:</label>
+            <select id="characterSet">
+                <option value="default">Default</option>
+                <option value="katakana">Katakana</option>
+                <option value="binary">Binary (0s and 1s)</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+        <div class="control-group custom-char" style="display: none;">
+            <label for="customChars">Custom Characters:</label>
+            <input type="text" id="customChars" placeholder="Enter custom characters">
+        </div>
+        <div class="control-group">
+            <label for="interactionMode">Interaction Mode:</label>
+            <select id="interactionMode">
+                <option value="none">None</option>
+                <option value="push">Push Away</option>
+                <option value="revolve">Revolve</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <button id="togglePanel">Hide Panel</button>
+        </div>
+    </div>
+    <button id="infoButton" class="info-button" style="display: none;">i</button>
+    <script src="matrix.js"></script>
+</body>
+</html>
