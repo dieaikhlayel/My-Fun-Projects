@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffc96b 0%, #ff7b9c 100%); /* A fun, warm gradient */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* The official font of dad jokes */
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h1 {
+    color: #ff6b6b;
+    margin-top: 0;
+}
+
+.joke-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 2rem 0;
+    min-height: 80px; /* Prevents layout shift when joke loads */
+    color: #333;
+}
+
+.joke-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: inherit; /* Keep the Comic Sans vibe */
+    font-weight: bold;
+    color: white;
+    background-color: #4ecdc4; /* A fun, friendly teal */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #2a8f88;
+    transition: all 0.1s ease;
+}
+
+.joke-button:hover {
+    background-color: #ff6b6b;
+    box-shadow: 0 4px 0 #c44e4e;
+}
+
+.joke-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #2a8f88;
+}
+
+/* Optional: Add a class for the punchline delivery */
+.punchline {
+    font-weight: bold;
+    color: #ff6b6b;
+}
